@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Aluno</title>
+</head>
+
+<body>
+    <div class="formulario">
+        <form action="cadastroAluno" method="post">
+        <h1>Cadastro Cliente</h1>
+
+        <table>
+            <tr>
+                <td>
+                    <label>Nome</label>
+                    <input type="text" name="nome" placeholder="Degite o nome:" minlength="1" maxlength="150" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Idade</label>
+                    <input type="number" name="idade" placeholder="Digite a idade:" min="1" max="100">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Cadastrar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+
+</html>
