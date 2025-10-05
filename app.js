@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const {Pool} = require("pg");
 const path = require("path");
+const cors = require("cors");
 
 //configurando
 const app = express();
@@ -13,7 +14,7 @@ const ipDoServidor = "127.0.0.1";
 const pool = new Pool({
   user: "postgres",
   host: "localhost",
-  port: 5432,
+  port: 5433,
   database: "cadastroAluno",
   password: "postgres",
 });
@@ -22,7 +23,7 @@ const pool = new Pool({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
-
+app.use(cors());
 //serve arquivos estáticos da pasta views
 app.use(express.static(path.join(__dirname, "views"))); 
 
